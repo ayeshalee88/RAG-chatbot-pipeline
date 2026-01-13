@@ -124,7 +124,7 @@ agent=Agent(
 
 result=Runner.run_sync(
     agent,
-    "What is humanoid robotics?",
+    "does there is ros topic?",
     run_config=config
 )
 
