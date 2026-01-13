@@ -1,0 +1,15 @@
+[project]
+name = "rag-system"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "cohere>=5.20.1",
+    "lxml>=6.0.2",
+    "openai-agents>=0.6.5",
+    "python-dotenv>=1.2.1",
+    "qdrant-client>=1.16.2",
+    "requests>=2.32.5",
+]
