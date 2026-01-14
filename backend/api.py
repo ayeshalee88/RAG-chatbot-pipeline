@@ -20,7 +20,7 @@ import cohere
 load_dotenv()
 
 # Configuration
-groq_api_key = os.getenv("GROK_API_KEY")
+groq_api_key = os.getenv("OPENAI_API_KEY")
 cohere_api_key = os.getenv("COHERE_API_KEY")
 qdrant_url = os.getenv("QDRANT_URL")
 qdrant_api_key = os.getenv("QDRANT_API_KEY")
