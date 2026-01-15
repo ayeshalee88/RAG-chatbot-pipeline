@@ -217,6 +217,17 @@ async def search_documents(request: ChatRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Search failed: {str(e)}")
 
+
+@app.get("/debug")
+async def debug():
+    """Debug endpoint to check environment variables."""
+    return {
+        "groq_key_set": groq_api_key is not None,
+        "groq_key_length": len(groq_api_key) if groq_api_key else 0,
+        "cohere_key_set": cohere_api_key is not None,
+        "cohere_key_length": len(cohere_api_key) if cohere_api_key else 0
+    }     
+
 # Run with: uvicorn api:app --reload --host 0.0.0.0 --port 8000
 if __name__ == "__main__":
     import uvicorn
